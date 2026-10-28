@@ -85,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </span>
               </div>
               <p className="text-xs text-stone-500 font-medium hidden sm:block">
-                مساعدك الذكي لاقتراح الوجبات حسب مكوناتك • أكثر من 2,000 وصفة
+                موسوعة الطبخ الأصيل ومساعدك الذكي لاقتراح الوجبات حسب مكوناتك
               </p>
             </div>
           </div>

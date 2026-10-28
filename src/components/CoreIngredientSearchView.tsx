@@ -410,23 +410,44 @@ export const CoreIngredientSearchView: React.FC<CoreIngredientSearchViewProps> =
               onChange={(e) => setSelectedCuisine(e.target.value)}
               className="w-full text-xs font-bold p-3 rounded-xl border border-stone-300 bg-white text-stone-800 focus:outline-none focus:border-amber-500"
             >
-              <option value="all">جميع المطابخ</option>
-              <option value="syrian_all">🇸🇾 المطبخ السوري (الكل)</option>
-              <option value="سوري (شامي دمشقي)">🇸🇾 سوري شامي دمشقي</option>
-              <option value="سوري (حلبي)">🇸🇾 سوري حلبي</option>
-              <option value="سوري (حمصي)">🇸🇾 سوري حمصي</option>
-              <option value="سوري (ساحلي)">🇸🇾 سوري ساحلي لاذقاني</option>
-              <option value="سوري (جزراوي وديري)">🇸🇾 سوري ديري وجزراوي</option>
-              <option value="لبناني">🇱🇧 لبناني</option>
-              <option value="فلسطيني">🇵🇸 فلسطيني</option>
-              <option value="أردني">🇯🇴 أردني</option>
-              <option value="مصري">🇪🇬 مصري</option>
-              <option value="خليجي">🇸🇦 خليجي</option>
-              <option value="عراقي">🇮🇶 عراقي</option>
-              <option value="مغاربي">🇲🇦 مغاربي</option>
-              <option value="تركي">🇹🇷 تركي</option>
-              <option value="إيطالي">🇮🇹 إيطالي</option>
-              <option value="آسيوي وعالمي">🌏 آسيوي وعالمي</option>
+              <option value="all">جميع المطابخ (1053 وصفة)</option>
+              <optgroup label="المطبخ السوري العريق ومناطقه">
+                <option value="syrian_all">🇸🇾 المطبخ السوري (الكل - 268 وصفة)</option>
+                <option value="سوري (شامي دمشقي)">🇸🇾 سوري شامي دمشقي</option>
+                <option value="سوري (حلبي)">🇸🇾 سوري حلبي</option>
+                <option value="سوري (حمصي)">🇸🇾 سوري حمصي</option>
+                <option value="سوري (حموي)">🇸🇾 سوري حموي</option>
+                <option value="سوري (حوراني)">🇸🇾 سوري حوراني</option>
+                <option value="سوري (ساحلي)">🇸🇾 سوري ساحلي لاذقاني</option>
+                <option value="سوري (جزراوي وديري)">🇸🇾 سوري ديري وجزراوي</option>
+              </optgroup>
+              <optgroup label="المطابخ العربية والإقليمية">
+                <option value="لبناني">🇱🇧 لبناني</option>
+                <option value="فلسطيني">🇵🇸 فلسطيني</option>
+                <option value="أردني">🇯🇴 أردني</option>
+                <option value="مصري">🇪🇬 مصري</option>
+                <option value="خليجي">🇸🇦 خليجي</option>
+                <option value="عراقي">🇮🇶 عراقي</option>
+                <option value="مغاربي">🇲🇦 مغاربي</option>
+                <option value="يمني">🇾🇪 يمني</option>
+                <option value="تركي">🇹🇷 تركي</option>
+                <option value="فارسي">🇮🇷 فارسي</option>
+              </optgroup>
+              <optgroup label="المطابخ العالمية">
+                <option value="إيطالي">🇮🇹 إيطالي</option>
+                <option value="فرنسي">🇫🇷 فرنسي</option>
+                <option value="إسباني">🇪🇸 إسباني</option>
+                <option value="يوناني">🇬🇷 يوناني</option>
+                <option value="هندي">🇮🇳 هندي</option>
+                <option value="صيني">🇨🇳 صيني</option>
+                <option value="ياباني">🇯🇵 ياباني</option>
+                <option value="تايلندي">🇹🇭 تايلندي</option>
+                <option value="كوري">🇰🇷 كوري</option>
+                <option value="مكسيكي">🇲🇽 مكسيكي</option>
+                <option value="برازيلي">🇧🇷 برازيلي</option>
+                <option value="إثيوبي">🇪🇹 إثيوبي</option>
+                <option value="آسيوي وعالمي">🌏 آسيوي وعالمي</option>
+              </optgroup>
             </select>
           </div>
 
