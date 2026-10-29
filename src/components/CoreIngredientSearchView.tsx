@@ -34,7 +34,7 @@ interface CoreIngredientSearchViewProps {
 // Tokenize text for Arabic matching
 function tokenize(text: string): string[] {
   return text
-    .toLowerCase()
+    ?.toLowerCase()
     .replace(/[ً-ْ]/g, '') // remove tashkeel
     .replace(/[أإآ]/g, 'ا')
     .replace(/ة/g, 'ه')
@@ -130,7 +130,7 @@ export const CoreIngredientSearchView: React.FC<CoreIngredientSearchViewProps> =
 
   const handleAddIngredient = () => {
     const trimmed = ingredientInput.trim();
-    if (trimmed && !userIngredients.some((i) => i.toLowerCase() === trimmed.toLowerCase())) {
+    if (trimmed && !userIngredients.some((i) => i?.toLowerCase() === trimmed?.toLowerCase())) {
       setUserIngredients([...userIngredients, trimmed]);
       setIngredientInput('');
     }
