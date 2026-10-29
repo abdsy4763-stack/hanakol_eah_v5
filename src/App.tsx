@@ -112,7 +112,7 @@ export default function App() {
 
   // Fetch 2150+ recipes from public/recipes.json
   useEffect(() => {
-    fetch('/recipes.json')
+   fetch(`${import.meta.env.BASE_URL}recipes.json`)
       .then((res) => {
         if (!res.ok) throw new Error('Network response not ok');
         return res.json();
