@@ -47,8 +47,8 @@ function tokenize(text: string): string[] {
 function matchIngredient(userTokenWords: string[], recipeItemName: string): boolean {
   const recipeTokens = tokenize(recipeItemName);
   // Match if any user token is contained in recipe token or vice versa
-  return userTokenWords.some((u) => 
-    recipeTokens.some((r) => r.includes(u) || u.includes(r))
+  return userTokenWords?.some((u) => 
+    recipeTokens?.some((r) => r.includes(u) || u.includes(r))
   );
 }
 
@@ -130,7 +130,7 @@ export const CoreIngredientSearchView: React.FC<CoreIngredientSearchViewProps> =
 
   const handleAddIngredient = () => {
     const trimmed = ingredientInput.trim();
-    if (trimmed && !userIngredients.some((i) => i?.toLowerCase() === trimmed?.toLowerCase())) {
+    if (trimmed && !userIngredients?.some((i) => i?.toLowerCase() === trimmed?.toLowerCase())) {
       setUserIngredients([...userIngredients, trimmed]);
       setIngredientInput('');
     }
@@ -200,7 +200,7 @@ export const CoreIngredientSearchView: React.FC<CoreIngredientSearchViewProps> =
 
       recipe.ingredients.forEach((ing) => {
         const ingName = ing.item;
-        const isMatchedByUser = userTokensList.some((uTokens) =>
+        const isMatchedByUser = userTokensList?.some((uTokens) =>
           matchIngredient(uTokens, ingName)
         );
 
@@ -208,7 +208,7 @@ export const CoreIngredientSearchView: React.FC<CoreIngredientSearchViewProps> =
           matchedIngredients.push(ingName);
         } else {
           // Check if it's in pantry
-          const isPantry = pantryTokensList.some((pTokens) =>
+          const isPantry = pantryTokensList?.some((pTokens) =>
             matchIngredient(pTokens, ingName)
           );
           if (!isPantry) {
