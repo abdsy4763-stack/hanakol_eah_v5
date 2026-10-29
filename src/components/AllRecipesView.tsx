@@ -145,12 +145,12 @@ export const AllRecipesView: React.FC<AllRecipesViewProps> = ({
 
     // 1. Search Query filter (searches title, ingredients, instructions, tips)
     if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase().trim();
+      const q = searchQuery?.toLowerCase().trim();
       result = result.filter((r) => {
-        const titleMatch = r.title.toLowerCase().includes(q);
-        const cuisineMatch = r.cuisine.toLowerCase().includes(q);
-        const ingredientMatch = r.ingredients.some((ing) => ing.item.toLowerCase().includes(q));
-        const chefTipMatch = r.chef_tip.toLowerCase().includes(q);
+        const titleMatch = r.title?.toLowerCase().includes(q);
+        const cuisineMatch = r.cuisine?.toLowerCase().includes(q);
+        const ingredientMatch = r.ingredients.some((ing) => ing.item?.toLowerCase().includes(q));
+        const chefTipMatch = r.chef_tip?.toLowerCase().includes(q);
         return titleMatch || cuisineMatch || ingredientMatch || chefTipMatch;
       });
     }
