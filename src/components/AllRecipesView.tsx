@@ -149,7 +149,7 @@ export const AllRecipesView: React.FC<AllRecipesViewProps> = ({
       result = result.filter((r) => {
         const titleMatch = r.title?.toLowerCase().includes(q);
         const cuisineMatch = r.cuisine?.toLowerCase().includes(q);
-        const ingredientMatch = r.ingredients.some((ing) => ing.item?.toLowerCase().includes(q));
+        const ingredientMatch = r.ingredients?.some((ing) => ing.item?.toLowerCase().includes(q));
         const chefTipMatch = r.chef_tip?.toLowerCase().includes(q);
         return titleMatch || cuisineMatch || ingredientMatch || chefTipMatch;
       });
