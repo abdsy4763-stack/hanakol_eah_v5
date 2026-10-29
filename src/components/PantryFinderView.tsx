@@ -75,7 +75,7 @@ export const PantryFinderView: React.FC<PantryFinderViewProps> = ({
       let matchCount = 0;
       selectedIngredients.forEach((sel) => {
         const hasMatch = recipe.ingredients.some((i) => 
-          i.item.toLowerCase().includes(sel.toLowerCase())
+          i.item?.toLowerCase().includes(sel?.toLowerCase())
         );
         if (hasMatch) matchCount++;
       });
